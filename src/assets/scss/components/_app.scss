@@ -1,0 +1,12 @@
+.app {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr minmax(auto, 480px) 1fr;
+    justify-items: center;
+    padding: 16px;
+}
+
+.app app-input-search,
+.app app-result-list {
+    grid-column: 2;
+}

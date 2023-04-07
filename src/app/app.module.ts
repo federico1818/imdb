@@ -8,13 +8,19 @@ import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
 import { MaterialModule } from 'src/app/material/material.module'
 import { SearchComponent } from './pages/search/search.component'
-import { InputSearchComponent } from './components/input-search/input-search.component'
+import { InputSearchComponent } from './components/input-search/input-search.component';
+import { ResultComponent } from './components/result/result.component';
+import { ResultListComponent } from './components/result-list/result-list.component';
+import { TitleComponent } from './pages/title/title.component'
 
 @NgModule({
     declarations: [
         AppComponent,
         SearchComponent,
-        InputSearchComponent
+        InputSearchComponent,
+        ResultComponent,
+        ResultListComponent,
+        TitleComponent
     ],
     imports: [
         BrowserModule,
