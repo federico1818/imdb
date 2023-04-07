@@ -4,6 +4,10 @@
 @import 'assets/scss/base/reset';
 @import 'assets/scss/base/fonts';
 
+@import 'assets/scss/material/mat-form-field';
+
 @import 'assets/scss/components/app';
+@import 'assets/scss/components/title';
 
 @import 'assets/scss/pages/home';
+@import 'assets/scss/pages/search';

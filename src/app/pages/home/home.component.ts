@@ -1,4 +1,5 @@
 import { Component } from '@angular/core'
+import { Router } from '@angular/router'
 
 @Component({
     selector: 'app-home',
@@ -7,7 +8,15 @@ import { Component } from '@angular/core'
 })
 
 export class HomeComponent {
+    constructor(
+        private _router: Router
+    ) {}
+
     public onSearch(search: string): void {
+        this._router.navigate(
+            ['search'],
+            { queryParams: { q: search } }
+        )
         console.log(search)
     }
 }

@@ -1,2 +1,7 @@
-<app-input-search (search)="onSearch($event)"></app-input-search>
+<header>
+    <a routerLink="/">
+        <h1 class="title">FILMS</h1>
+    </a>
+    <app-input-search [q]="q" (search)="onSearch($event)"></app-input-search>
+</header>
 <app-result-list [results]="results"></app-result-list>

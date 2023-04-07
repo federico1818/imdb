@@ -1,6 +1,7 @@
 a {
     display: grid;
     grid-gap: 8px 0;
+    justify-items: center;
 }
 
 img {
@@ -10,5 +11,4 @@ img {
 
 h2 {
     font-size: 13px;
-    text-align: center;
 }
