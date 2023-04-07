@@ -1,4 +1,6 @@
 import { Component } from '@angular/core'
+import { ResultMovie } from 'src/app/models/result-movie'
+import { ImdbService } from 'src/app/services/imdb.service'
 
 @Component({
     selector: 'app-search',
@@ -7,5 +9,16 @@ import { Component } from '@angular/core'
 })
 
 export class SearchComponent {
+    public results!: ResultMovie[]
 
+    constructor(
+        private _imdbService: ImdbService
+    ) {}
+
+    public onSearch(search: string): void {
+        this._imdbService.searchMovie(search)
+            .subscribe((movies: ResultMovie[]) => {
+                this.results = movies
+            })
+    }
 }

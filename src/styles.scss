@@ -1,5 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'assets/scss/config/fonts';
+
 @import 'assets/scss/base/reset';
 @import 'assets/scss/base/fonts';
 
 @import 'assets/scss/components/app';
+
+@import 'assets/scss/pages/home';

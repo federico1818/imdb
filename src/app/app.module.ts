@@ -13,7 +13,8 @@ import { ResultComponent } from './components/result/result.component'
 import { ResultListComponent } from './components/result-list/result-list.component'
 import { TitleComponent } from './pages/title/title.component'
 import { ImdbService } from './services/imdb.service'
-import { ImdbMockService } from './services/imdb-mock.service'
+import { ImdbMockService } from './services/imdb-mock.service';
+import { HomeComponent } from './pages/home/home.component'
 
 @NgModule({
     declarations: [
@@ -22,7 +23,8 @@ import { ImdbMockService } from './services/imdb-mock.service'
         InputSearchComponent,
         ResultComponent,
         ResultListComponent,
-        TitleComponent
+        TitleComponent,
+        HomeComponent
     ],
     imports: [
         BrowserModule,
