@@ -49,6 +49,7 @@ export class ImdbMockService implements ImdbService {
         const movie: Movie = {
             id: 'tt1375666',
             title: 'Inception',
+            year: '2010',
             image: 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_Ratio0.6762_AL_.jpg',
             plot: 'A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.',
             actorList: [
@@ -58,7 +59,23 @@ export class ImdbMockService implements ImdbService {
                     name: "Leonardo DiCaprio",
                     asCharacter: "Cobb"
                 },
-            ]
+            ],
+            images: {
+                items: [
+                    {
+                        title: 'Leonardo DiCaprio and Ken Watanabe in Inception (2010)',
+                        image: 'https://m.media-amazon.com/images/M/MV5BMjIyNjk1OTgzNV5BMl5BanBnXkFtZTcwOTU0OTk1Mw@@._V1_Ratio1.5000_AL_.jpg'
+                    },
+                    {
+                        title: 'Leonardo DiCaprio, Tom Berenger, Joseph Gordon-Levitt, Tom Hardy, Cillian Murphy, Elliot Page, and Ken Watanabe in Inception (2010)',
+                        image: 'https://m.media-amazon.com/images/M/MV5BNjMxNjI1Mjc1OV5BMl5BanBnXkFtZTcwMDY0OTk1Mw@@._V1_Ratio1.5000_AL_.jpg'
+                    },
+                    {
+                        title: 'Leonardo DiCaprio, Christopher Nolan, and Elliot Page in Inception (2010)',
+                        image: 'https://m.media-amazon.com/images/M/MV5BMTk1NDM4MDMwMF5BMl5BanBnXkFtZTcwMjY0OTk1Mw@@._V1_Ratio1.5000_AL_.jpg'
+                    },
+                ]
+            }
         }
 
         response.next(movie)
