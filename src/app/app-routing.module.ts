@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router'
 
 import { HomeComponent } from 'src/app/pages/home/home.component'
 import { SearchComponent } from 'src/app/pages/search/search.component'
+import { TitleComponent } from 'src/app/pages/title/title.component'
 
 const routes: Routes = [
     {
@@ -12,6 +13,10 @@ const routes: Routes = [
     {
         path: 'search',
         component: SearchComponent
+    },
+    {
+        path: 'title/:id',
+        component: TitleComponent
     }
 ]
 

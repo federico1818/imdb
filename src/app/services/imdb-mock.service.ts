@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core'
 import { Observable, ReplaySubject } from 'rxjs'
 
+import { Movie } from 'src/app/models/movie'
 import { ResultMovie } from 'src/app/models/result-movie'
 import { ImdbService } from 'src/app/services/imdb.service'
 
@@ -38,6 +39,29 @@ export class ImdbMockService implements ImdbService {
         ] as ResultMovie[]
 
         response.next(results)
+
+        return response
+    }
+
+    public title(id: string): Observable<Movie> {
+        let response: ReplaySubject<Movie> = new ReplaySubject<Movie>()
+
+        const movie: Movie = {
+            id: 'tt1375666',
+            title: 'Inception',
+            image: 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_Ratio0.6762_AL_.jpg',
+            plot: 'A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.',
+            actorList: [
+                {
+                    id: "nm0000138",
+                    image: "https://m.media-amazon.com/images/M/MV5BMjI0MTg3MzI0M15BMl5BanBnXkFtZTcwMzQyODU2Mw@@._V1_Ratio0.7273_AL_.jpg",
+                    name: "Leonardo DiCaprio",
+                    asCharacter: "Cobb"
+                },
+            ]
+        }
+
+        response.next(movie)
 
         return response
     }
